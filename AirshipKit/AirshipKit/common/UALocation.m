@@ -205,12 +205,13 @@ NSString *const UALocationBackgroundUpdatesAllowed = @"UALocationBackgroundUpdat
         return;
     }
 
-    UA_LINFO("Requesting location authorization.");
-#if TARGET_OS_TV    // requestAlwaysAuthorization is not available on tvOS
-    [self.locationManager requestWhenInUseAuthorization];
-#else
-    [self.locationManager requestAlwaysAuthorization];
-#endif
+    UA_LINFO("ASOS modification: Requesting location authorization has been turned off.");
+//    UA_LINFO("Requesting location authorization.");
+//#if TARGET_OS_TV    // requestAlwaysAuthorization is not available on tvOS
+//    [self.locationManager requestWhenInUseAuthorization];
+//#else
+//    [self.locationManager requestAlwaysAuthorization];
+//#endif
 }
 
 
